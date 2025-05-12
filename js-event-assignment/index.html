@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <main id="main">
+
+        <section class="reg">
+            <form method="post" action="">
+                <!--Form header-->
+                <h1>Register</h1>
+                <div class="new">
+
+                    <!--Input fields-->
+                    <input class="input" type="text" placeholder="Enter your Firstname" required>
+                    <input class="input" type="text" placeholder="Enter your Surname" required>
+                    <input class="input" type="email" placeholder="Enter your email" required>
+                    <input class="input" type="number" maxlength="10" placeholder="Enter your Phone" required>
+                    <input id="password" class="input" type="password" placeholder="Enter your password" minlength="8" maxlength="25" required>
+                    <input id="verifyPassword" class="input" type="password" placeholder="Verify password" required>
+                    <div id="password-match-msg"></div>
+                </div>
+                
+                <!--Register button-->
+                <button class="reg-btn">Register</button>
+                
+                <a href="https://academy.powerlearnprojectafrica.org/login">Already have an account? Login</a>
+            </form>
+
+            
+        </section>
+
+        <button class="change-bg" >change background</button>
+
+    </main>
+
+    <div id="secret-modal">Secret Background Mode Activated!</div> 
+    <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+
+body{
+    margin: 0 auto;
+}
+
+/*content after nav-bar*/
+main{
+    background-image: url(images/@wallandiadesk\ \(2\).jpg);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+/* Secret dark mode background for secret action */
+main.secret-mode {
+    background-color: #121212 !important;
+    background-image: none !important;
+    transition: background-color 0.5s ease;
+}
+
+
+.change-bg {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    background: rgba(255 255 255 / 0.85);
+    color: #222;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 8px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+    z-index: 10;
+    letter-spacing: 0.05em;
+}
+.change-bg:hover{
+    background-color: white;
+    color: black;
+}
+.reg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    text-align: center;
+    color: hsl(0, 0%, 90%);
+    width: 400px;
+    font-size: 20px;
+    border: 1px solid hsl(0, 0%, 92%);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    
+}
+
+form h1{
+    font-size: 35px;
+    margin-top: -10px;
+    text-decoration: underline;
+    user-select: none;
+}
+
+.input{
+    background: none;
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 90%);
+    margin-bottom: 10px;
+}
+
+/*display of the input field*/
+.new{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin-bottom: 20px;
+}
+
+/*input field placeholder*/
+.input::placeholder{
+    color: hsl(0, 0%, 90%);
+    font-size: 15px;
+}
+
+/*when input is selcted*/
+input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+/* Flash border on keypress */
+.input.keypress-flash {
+    border-bottom-color: rgb(0, 172, 252) !important;
+}
+
+ /* Remove number input arrows */
+ input[type="number"]::-webkit-inner-spin-button,
+ input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none; /* Chrome, Safari, Edge */
+   margin: 0;
+ }
+ input[type="number"] {
+   -moz-appearance: textfield; /* Firefox */
+ }
+
+/*button styles*/
+button{
+    width: 100%;
+    background-color: hsl(0, 0%, 90%);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding: 15px 0;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+button:hover{
+    background-color: #e6e6e6cc;
+    color: rgb(0, 172, 252);
+    box-shadow: 0 6px 12px rgba(0,172,249,0.5);
+}
+
+
+a{
+    color: white;
+}
+
+
+/* Feedback message for password match */
+#password-match-msg {
+    grid-column: span 2;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    user-select: none;
+    color: #f44336; /* default to error color */
+    height: 18px;
+}
+#password-match-msg.match {
+    color: #4caf50; /* green for match */
+}
+
+/* Simple modal style for secret message */
+#secret-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20,20,20,0.95);
+    color: #fff;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,172,252,0.7);
+    display: none;
+    z-index: 9999;
+    user-select: none;
+    text-align: center;
+    max-width: 80%;
+    pointer-events: none;
+}
+
+/*responsiveness*/
+@media (max-width: 768px) {
+    
+    .reg{
+        padding: 20px;
+        text-align: center;
+        color: hsl(0, 0%, 90%);
+        width: 300px;
+        font-size: 20px;
+        
+    }
+    
+    form h1{
+        font-size: 25px;
+    }
+    
+    .input{
+        font-size: 15px;
+    }
+    
+    .new{
+        margin-bottom: 20px;
+    }
+    
+
+    
+    button{
+        font-size: 15px;
+        margin-bottom: 10px;
+        padding: 10px 0;
+    }
+    a{
+        font-size: 10px;
+    }
+}
